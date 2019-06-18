@@ -33,6 +33,7 @@ def compile(code, tapesize, **kwargs):
     # - subtract the current swap 1 from the current swap 2
     # - go to the current swap 2
     # - WHILE
+    code = re.sub("copy-cell (\\d+) (\\d+) (\\d+)", "goto-cell \\2 [-] goto-cell \\3 [-] goto-cell \\1 [goto-cell \\3 + goto-cell \\1 -] goto-cell \\3 [goto-cell \\2 + goto-cell \\1 + goto-cell \\3 -] goto-cell \\2", code)
     code = code.replace("goto-cell 0", "goto-zero")
     code = re.sub("goto-cell (\\d+)", "<[-]+[>3[-]>[-]<2[>+>+<2-]>2[<2+>2-]+\\1<[>-<-]>]<3", code)
     code = code.replace("goto-zero", ">[<4]<")

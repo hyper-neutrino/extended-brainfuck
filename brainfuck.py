@@ -4,7 +4,7 @@ import shlex, sys
 
 version = 0
 
-code = ""
+code = None
 
 istream = sys.stdin
 
