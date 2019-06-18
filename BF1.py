@@ -4,5 +4,5 @@
 
 import re
 
-def compile(code):
+def compile(code, **kwargs):
     return re.sub("[+-.,<>\\[\\]]\\s*\\d+", lambda s: s.group()[0] * int(s.group()[1:].strip()), code)
