@@ -31,7 +31,7 @@ stages = False
 
 pause = False
 
-def process_args(args = sys.argv[1:]):
+def process_args(args = sys.argv[1:] or ["--help"]):
     global version, code, istream, ostream, collect, tapesize, cellupper, celllower, cellsize, compile, newline, verbose, vbflag, stages, pause, translate
     index = 0
     while index < len(args):
