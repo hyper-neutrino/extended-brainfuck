@@ -40,4 +40,4 @@ The third extension implements some basic arithmetic operations:
 
 # Brainfuck - Extension 4
 
-The fourth extension implements better memory management. `allocate-cell <name>` will tell the compiler to associate a cell with `<name>`. Every cell must be `allocate`d; the tape size will be re-bounded to the number of cells needed. `cell-of <name>` and ``\`<name>\``` are translated to the pointer position of the cell. Cell names are enumerated in order of appearance in the code.
+The fourth extension implements better memory management. `allocate-cell <name>` will tell the compiler to associate a cell with `<name>`. Every cell must be `allocate`d; the tape size will be re-bounded to the number of cells needed. `cell-of <name>` and `` `<name>` `` are translated to the pointer position of the cell. Cell names are enumerated in order of appearance in the code.
